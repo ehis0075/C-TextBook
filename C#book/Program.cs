@@ -2,9 +2,7 @@
 
 namespace C_book
 {
-    class Program
-    {
-
+    
         //multi-level inheritance
             class GrandParent
             {
@@ -49,6 +47,60 @@ namespace C_book
                     base.wheels = 2;
                 }
             }
+
+            //interface: implicitly
+            interface IVehicle
+            {
+                int Wheels { get; }
+            }
+
+            class Bike : IVehicle
+            {
+                private int wheels;
+                public int Wheels
+                {
+                    get 
+                    {
+                        return wheels;
+                    }
+                }
+            }
+
+             //interface: explicitly
+             interface IEnglish
+             {
+                 int Marks { get; }
+             }
+
+             interface IMath
+             {
+                 int Marks { get; }
+             }
+
+             class Student : IEnglish, IMath
+             {
+                 int english = 10;
+                 int maths = 9;
+
+                 int IMath.Marks
+                 {
+                     get
+                     {
+                         return english;
+                     }
+                 }
+
+                 int IEnglish.Marks
+                 {
+                     get
+                     {
+                         return maths;
+                     }
+                 }
+             }
+
+    class Program
+    {    
         static void Main(string[] args)
         {
             // private float[] weekTemp = { 47.9F, 34.8F, 12.0F, 26.3F};
@@ -111,8 +163,19 @@ namespace C_book
             Vehicle v = new Bike();
             System.Console.WriteLine(v.Wheels);
 
+            //interface: implicitly
+            IVehicle f = new Bike();
+            System.Console.WriteLine(f.Wheels);
 
-            //interface
+             //interface: implicitly
+             Student st = new Student();
+             int english = ((IEnglish)std).Marks;
+             int math = ((IMath)std).Marks;
+
+
+            
+
+
             
 
 
