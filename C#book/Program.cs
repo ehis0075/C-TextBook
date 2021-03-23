@@ -176,8 +176,42 @@ namespace C_book
         }
     }
 
+    //Dynamic polymorphism
+                //virtual method
+                class Vehicle
+                {
+                    public virtual void Run()
+                    {
+                        System.Console.WriteLine("Run vehicle");
+                    }
+                }
 
- 
+                class Bike: Vehicle
+                {
+                    public override void Run()
+                    {
+                        System.Console.WriteLine("Bike run");
+                    }
+                }
+
+                 //Dynamic polymorphism
+                //abstract method
+                abstract class Vehicle
+                {
+                    public abstract void Run();
+                }
+
+                class Bike : Vehicle
+                {
+                    public override void Run()
+                    {
+                        System.Console.WriteLine("run bike"); 
+                    }
+
+                }
+
+                
+
         static void Main(string[] args)
         {
             // private float[] weekTemp = { 47.9F, 34.8F, 12.0F, 26.3F};
@@ -290,8 +324,15 @@ namespace C_book
                 Console.WriteLine("d2 is less than d1");
                 }
 
+                //Dynamic polymorphism
+                //virtual method
+               Vehicle vc1 = new Vehicle();
+               vc1.Run();
 
-
+               //Dynamic polymorphism
+                //abstract method
+                Vehicle vc = new Vehicle();
+                vc.Run();
 
 
 
