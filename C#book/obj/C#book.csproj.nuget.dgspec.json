@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\C#book.csproj": {}
+    "C:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\C#book.csproj": {}
   },
   "projects": {
-    "c:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\C#book.csproj": {
+    "C:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\C#book.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\C#book.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\C#book.csproj",
         "projectName": "C#book",
-        "projectPath": "c:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\C#book.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\C#book.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\csharp_project\\C#book\\src\\C#book\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
