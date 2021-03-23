@@ -99,6 +99,26 @@ namespace C_book
                  }
              }
 
+             
+             //polymorphism
+             //method overloading by parameter type
+             class Calculator
+             {
+                 public void Add(int a, int b)
+                 {
+                     int result = a + b;
+
+                     System.Console.WriteLine("sum of ints = {0}", result);
+                 }
+
+                 public void Add(string a, string b)
+                 {
+                     string result = a + b;
+
+                     System.Console.WriteLine("sum of strings = {0}", result);
+                 }
+             }
+
     class Program
     {    
         static void Main(string[] args)
@@ -171,6 +191,18 @@ namespace C_book
              Student st = new Student();
              int english = ((IEnglish)std).Marks;
              int math = ((IMath)std).Marks;
+
+             //polymorphism
+             //method overloading by parameter type
+             Calculator cal = new Calculator();
+             cal.Add(1,2);
+             cal.Add("C", "SHARP");
+
+             
+
+
+
+
 
 
             
