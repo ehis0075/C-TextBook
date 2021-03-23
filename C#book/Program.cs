@@ -2,6 +2,8 @@
 
 namespace C_book
 {
+    class Program
+    { 
     
         //multi-level inheritance
             class GrandParent
@@ -99,8 +101,8 @@ namespace C_book
                  }
              }
 
-             
-             //polymorphism
+             // polymorphism
+             //static polymorphism
              //method overloading by parameter type
              class Calculator
              {
@@ -119,8 +121,18 @@ namespace C_book
                  }
              }
 
-    class Program
-    {    
+                //static polymorphism
+             //method overloading by length type
+             public void Show(string name)
+             {
+                 System.Console.WriteLine("Name = {0}", name);
+             }
+
+             public void Show(string name, int age)
+             {
+                 System.Console.WriteLine("Name = {0} - Age = {1}", name, age);
+             }
+             
         static void Main(string[] args)
         {
             // private float[] weekTemp = { 47.9F, 34.8F, 12.0F, 26.3F};
@@ -198,7 +210,15 @@ namespace C_book
              cal.Add(1,2);
              cal.Add("C", "SHARP");
 
-             
+
+               //static polymorphism
+             //method overloading by length type
+            Program pc = new Program();   
+            pc.Show("Ali");
+            pc.Show("Ali", 22);          
+
+
+
 
 
 
