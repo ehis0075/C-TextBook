@@ -132,7 +132,52 @@ namespace C_book
              {
                  System.Console.WriteLine("Name = {0} - Age = {1}", name, age);
              }
-             
+
+              //operator overloading
+              //unary
+              class Distance
+              {
+                  public int meter { get; set; }
+
+                  public static Distance operator ++ (Distance dis)
+                  {
+                      dis.meter += 1;
+                      return dis;
+                  }
+              }
+
+              //operator overloading
+              //overload binary operator
+              class Student
+              {
+                  public int Marks { get; set; }
+
+                  public static Student operator + (Student s1, Student s2)
+                  {
+                      Student std = new Student();
+                      std.Marks = s1.Marks + s2.Marks;
+
+                      return  std;
+                  }
+              } 
+
+              //Overload Comparison Operator
+    class Distance
+        {
+            public int meter { get; set; }
+            public static bool operator < (Distance d1, Distance d2 )
+            {
+            return (d1.meter < d2.meter);
+            }
+            public static bool operator > (Distance d1, Distance d2)
+            {
+            return (d1.meter > d2.meter);
+            } 
+        }
+    }
+
+
+ 
         static void Main(string[] args)
         {
             // private float[] weekTemp = { 47.9F, 34.8F, 12.0F, 26.3F};
@@ -215,7 +260,38 @@ namespace C_book
              //method overloading by length type
             Program pc = new Program();   
             pc.Show("Ali");
-            pc.Show("Ali", 22);          
+            pc.Show("Ali", 22);    
+
+            //operator overloading
+            Distance dd = new Distance();
+            dd.meter = 5;
+
+            distance++;
+            System.Console.WriteLine(dd.meter);
+
+
+            //operator overloading
+            //overload binary operator
+            Student s1 = new Student { Marks = 10 };
+            Student s2 = new Student { Marks = 20 };
+            Student s3 = s1 + s2;
+            Console.WriteLine(s3.Marks); 
+
+
+               //Overload Comparison Operator
+                 Distance d1 = new Distance { meter = 10 };
+                Distance d2 = new Distance { meter = 20 };
+                if(d1 < d2)
+                {
+                Console.WriteLine("d1 is less than d2");
+                }
+                else if(d2 < d1)
+                {
+                Console.WriteLine("d2 is less than d1");
+                }
+
+
+
 
 
 
