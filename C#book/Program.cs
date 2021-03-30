@@ -210,6 +210,22 @@ namespace C_book
 
                 }
 
+                 //Generics
+
+            class GenericClass<T> 
+            {
+                private T genericField;
+
+                public T GenericMethod(T genericParameter)
+                {
+                    this.genericField = genericParameter;
+                    return this.genericField;
+                }
+
+                public T GenericProperty { get; set; }
+                
+            }
+
                 
 
         static void Main(string[] args)
@@ -272,11 +288,11 @@ namespace C_book
 
             // abstract class
             Vehicle v = new Bike();
-            System.Console.WriteLine(v.Wheels);
+            //System.Console.WriteLine(v.Wheels);
 
             //interface: implicitly
             IVehicle f = new Bike();
-            System.Console.WriteLine(f.Wheels);
+            //System.Console.WriteLine(f.Wheels);
 
              //interface: implicitly
              Student st = new Student();
@@ -301,7 +317,7 @@ namespace C_book
             dd.meter = 5;
 
             distance++;
-            System.Console.WriteLine(dd.meter);
+            //System.Console.WriteLine(dd.meter);
 
 
             //operator overloading
@@ -309,7 +325,7 @@ namespace C_book
             Student s1 = new Student { Marks = 10 };
             Student s2 = new Student { Marks = 20 };
             Student s3 = s1 + s2;
-            Console.WriteLine(s3.Marks); 
+           // Console.WriteLine(s3.Marks); 
 
 
                //Overload Comparison Operator
@@ -342,6 +358,25 @@ namespace C_book
 
             //unboxing
             int unboxedAge = (int)boxedAge;
+
+
+            //Generics
+            // here <T> type becomes string
+           GenericClass<string> gen = new GenericClass<string>();
+           string strData = gen.GenericMethod("c#");
+           gen.GenericProperty = "Cert Exam: ";
+           System.Console.WriteLine("{0} {1}", strData, gen.GenericProperty);
+
+            //Generics
+            // here <T> type becomes int i.e a value type
+           GenericClass<int> gen = new GenericClass<int>();
+           int intData = gen.GenericMethod(70);
+           genInt.GenericProperty = 290;
+           System.Console.WriteLine("{0} {1}", intData, genInt.GenericProperty);
+
+
+
+
 
 
 
