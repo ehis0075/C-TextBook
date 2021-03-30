@@ -226,6 +226,23 @@ namespace C_book
                 
             }
 
+
+            // constarint where T: new()
+            class MyClass
+            {
+                // default constructor
+                public MyClass()
+                {
+
+                }
+            }
+
+            class GenericClass<T> 
+            {
+
+                //todo
+            }
+
                 
 
         static void Main(string[] args)
@@ -361,7 +378,7 @@ namespace C_book
 
 
             //Generics
-            // here <T> type becomes string
+            // here <T> type becomes string i.e a reference type
            GenericClass<string> gen = new GenericClass<string>();
            string strData = gen.GenericMethod("c#");
            gen.GenericProperty = "Cert Exam: ";
@@ -375,6 +392,9 @@ namespace C_book
            System.Console.WriteLine("{0} {1}", intData, genInt.GenericProperty);
 
 
+
+
+            GenericClass<MyClass> gen = new GenericClass<MyClass>();
 
 
 
