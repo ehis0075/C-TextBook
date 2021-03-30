@@ -335,6 +335,17 @@ namespace C_book
                 vc.Run();
 
 
+            //boxing and unboxing
+            //boxing
+            int age = 22;
+            object boxedAge = age;
+
+            //unboxing
+            int unboxedAge = (int)boxedAge;
+
+
+
+
 
 
 
